@@ -1,11 +1,8 @@
 package main
 
 import (
-	"encoding/json"
 	"net/http"
 )
-
-
 
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
 
@@ -14,7 +11,5 @@ func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
 		Message: "Hit the broker",
 	}
 
-	- = app.writeJSON(w, httpStatusOK, paypayload){
-		
-	}
+	_ = app.writeJSON(w, http.StatusOK, payload)
 }
